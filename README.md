@@ -14,7 +14,7 @@ This sample must provide the follow functionalities:
 Be sure to have  [Node](https://nodejs.org/en/) installed on your computer before install.
 If you do not have "yarn", or if something went wrong with it use "npm" instead
  ```
- $ git clone https://github.com/hizendev/hello-marvel
+ $ git clone https://github.com/HIZENDEV/hello-marvel.git
  $ cd react-marvel-catalog
  $ yarn install
  $ yarn start

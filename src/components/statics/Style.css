@@ -1,0 +1,22 @@
+.header {
+    z-index: 99;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 5em;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.26);
+}
+.brand {
+    width: 8em;
+}
+.user {
+    color: rgb(66, 66, 66);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

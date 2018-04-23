@@ -1,0 +1,22 @@
+{
+  "name": "hello-marvel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^4.13.0",
+    "lodash": "^4.17.5",
+    "marvel-api": "^1.1.0",
+    "material-icons-react": "^1.0.0",
+    "react": "^16.3.2",
+    "react-app-env": "^1.2.0",
+    "react-dom": "^16.3.2",
+    "react-modal": "^3.4.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

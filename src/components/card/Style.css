@@ -1,0 +1,157 @@
+.card {
+    width: 18em;
+    height: 6.5em;
+    float: left;
+    margin: .5em;
+}
+.card:hover .card-content {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+.card-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    transition: -webkit-transform 0.8s ease;
+    transition: transform 0.8s ease;
+    transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    border-radius: .2em;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;;
+    box-shadow: 0px 0px 29px 4px rgba(0,0,0,0.16);
+}
+.front {
+  background: #fff;
+}
+.back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    text-align: center;
+    vertical-align: middle;
+    background: #fff;
+}
+.back:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.content {
+    height: 6.5em;
+    line-height: 6.5em;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.characterName {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6em;
+    color: #4b4b4b;
+}
+.pictureProfile {
+    align-self: center;
+    height: 72px;
+    width: 72px;
+    border-radius: 40px;
+    object-fit: cover;
+    margin: 0 1em;
+    border: 3px solid #4b4b4b;
+}
+.center {
+    height: 6.5em;
+    line-height: 6.5em;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+  display: flex;
+  align-self: center;
+  overflow: hidden;
+  margin: 10px;
+  padding: 12px 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #ed1a23;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+  box-shadow: 2px 5px 10px var(--color-smoke);
+}
+.button:hover {
+  transition: all 150ms linear;
+  color: #eee;
+  background-color: #2b2d36;
+  opacity: 1;
+}
+.button:active {
+    transition: all 150ms linear;
+    background-color: #d5d6d6;
+    opacity: 1;
+}
+.button:focus {
+  outline: 1px dotted #959595;
+  outline-offset: -4px;
+}
+.inline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1em 0;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+.divider {
+    margin-bottom: -1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.subtitle {
+    margin: .6em 0;
+}
+
+.comicsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.comics {
+    list-style: none;
+    padding: .2em;
+}
+i {
+    cursor: pointer;
+}

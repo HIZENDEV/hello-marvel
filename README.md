@@ -5,13 +5,13 @@
 ## What it does?
 This sample must provide the follow functionalities:
  - A list of cards of characters loaded from the marvel API
- - Each card open a dialog with a collection of comic books
- - Infinite scroll integrated with API pagination
+ - Each card open a modal with a more information
+ - add up to five favorites (Can be increased)
 
 
  # Get started
 
-Be sure to have Node7(npm) installed on your computer before install.
+Be sure to have  [Node](https://nodejs.org/en/) installed on your computer before install.
 If you do not have "yarn", or if something went wrong with it use "npm" instead
  ```
  $ git clone https://github.com/hizendev/hello-marvel
@@ -38,9 +38,9 @@ If you do not have "yarn", or if something went wrong with it use "npm" instead
 ---
 
 ## Possible implementations
- - List of events
- - More details for each comic book
- - Any ideas?
+ - Increase API calls number
+ - Make it supported by realtime fonctionality
+ - Drag n' drop to  favorites
 
  ---
 

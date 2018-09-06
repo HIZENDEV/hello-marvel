@@ -7,6 +7,7 @@
     "lodash": "^4.17.5",
     "marvel-api": "^1.1.0",
     "material-icons-react": "^1.0.0",
+    "npm": "^6.4.1",
     "react": "^16.3.2",
     "react-app-env": "^1.2.0",
     "react-dom": "^16.3.2",

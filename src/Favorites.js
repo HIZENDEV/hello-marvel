@@ -14,7 +14,7 @@ export default class Favorites extends React.Component {
     componentDidUpdate() {
         // Loading while waiting for API Response
         let that = this
-        if (!this.state.loaded) {   
+        if (!this.state.loaded) {
             this.setState({ loaded: true, uid: this.props.uid })
             favorites.objectTest(this, function() {
                 favorites.favApiRequest(that)

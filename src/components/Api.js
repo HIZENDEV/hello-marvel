@@ -2,7 +2,7 @@
 module.exports = {
     uri: 'http://gateway.marvel.com:80',
     endpoint: '/v1/public/comics',
-    publicKey: '38d286dfcca33466f5b6030a2bb0b6a1',
-    privateKey: '748f44714e2abad4bc9435eb6975c047238d8d5f',
+    publicKey: 'b692b5956d770af5d2f26b7bf119ff3a',
+    privateKey: '34ab488f974a44a3deeafcbc07d0b7d7616dc085',
     timestamp: Date.now()
-};  
+};

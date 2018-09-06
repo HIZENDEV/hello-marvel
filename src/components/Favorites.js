@@ -8,7 +8,7 @@ import _ from 'lodash'
 //Function file: refered to '../Favorites.js'
 
 var favList = [];
-var response = [];
+// var response = [];
 var req = []
 
 const marvel = marvelApi.createClient({
@@ -22,22 +22,24 @@ export async function databaseResponse(current, uid, callback) {
 
 function resolveQueryData(current, uid) {
     firebase.database().ref(`/users/${uid}/favorites`).once('value').then(function (snapshot) {
-        response = snapshot.val();
+        var response = snapshot.val();
         !response ? current.setState({ snapshot: false }) : current.setState({ snapshot: response })
     });
 }
 
 export function databaseRequest(event, current, uid) {
-    return firebase.database().ref(`users/${uid}/favorites`).once("value").then(function (snapshot) {
+    return firebase.database().ref(`users/${uid}/favorites`).once('value').then(function (snapshot) {
+      console.log(event, current)
+      event
         if (snapshot.numChildren() < 5) {
             firebase.database().ref(`users/${uid}/favorites`).push(event)
-            return firebase.database().ref(`users/${uid}/favorites`).once("value").then(function (snapshot) {
-                alert('Please refresh your brother')
+            return firebase.database().ref(`users/${uid}/favorites`).once('value').then(function (snapshot) {
+                window.location.reload()
             })
         } else {
             alert('Nombre maximum de favoris ajouté')
         }
-    })  
+    })
 }
 
 export function objectTest(that, callback) {
@@ -47,7 +49,7 @@ export function objectTest(that, callback) {
 
 export function favApiRequest(that) {
     for (let index = 0; index < favList.length; index++) {
-        marvel.characters.find(favList[index]).then((response) => {  
+        marvel.characters.find(favList[index]).then((response) => {
             req.push(response.data[0])
             that.setState({
                 favorites: req,
@@ -76,4 +78,5 @@ export function favoritesList(that) {
 
 export function delAll(uid) {
     firebase.database().ref(`users/${uid}`).remove()
+    window.location.reload()
 }

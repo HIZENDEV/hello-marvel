@@ -17,6 +17,7 @@ export default class App extends Component {
   componentWillMount() {
     // Authentificate the user and retrive his own data from firebase
     let currentComponent = this
+    auth.anonymously()
     auth.authState(this, function(){
       favorites.databaseResponse(currentComponent, currentComponent.state.uid)
     })
